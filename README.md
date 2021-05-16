@@ -1,6 +1,6 @@
 # Cocktail-app
 
-This is a small cocktail searcher web application utilizing the [https://www.thecocktaildb.com/api.php](thecocktaildb web api). The project contains both the frontend (Javscript, React, Redux, MaterialUI) and the backend (Typescript, Express). The former uses Redux to store the recieved data and the state of the request to the backend, while the latter forwards the API calls and transforms the data before returning it to the frontend. Due to the short available time, testing is out of scope for now.
+This is a small cocktail searcher web application utilizing the [https://www.thecocktaildb.com/api.php](thecocktaildb) web api. The project contains both the frontend (Javscript, React, Redux, MaterialUI) and the backend (Typescript, Express). The former uses Redux to store the recieved data and the state of the request to the backend, while the latter forwards the API calls and transforms the data before returning it to the frontend. Due to the short available time, testing is out of scope for now.
 
 ## To run the app, you need to run both the backend and the frontend servers as well!
 
