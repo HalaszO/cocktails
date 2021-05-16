@@ -1,5 +1,5 @@
 import { AppTitle } from "../appTitle/AppTitle";
-import { HeroArea } from "../heroArea/HeroArea";
+import { CocktailList } from "../cocktailList/cocktailList";
 import { SideBar } from "./../sideBar/SideBar";
 import "./cocktailPage.css";
 
@@ -8,7 +8,7 @@ export const CocktailPage = () => {
     <div className="page cocktail-page">
       <AppTitle />
       <SideBar />
-      <HeroArea />
+      <CocktailList />
     </div>
   );
 };

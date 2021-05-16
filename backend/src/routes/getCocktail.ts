@@ -9,7 +9,7 @@ import mapDrinks from "../utils/mapDrinks";
 
 const router = express.Router();
 
-router.get("/api/cocktails", async (req: Request, res: Response) => {
+router.get("/api/cocktail", async (req: Request, res: Response) => {
   let result: AxiosResponse<any>;
   try {
     // query search param has the search term

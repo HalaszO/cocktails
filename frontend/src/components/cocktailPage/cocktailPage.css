@@ -5,10 +5,10 @@
   gap: 0px 0px;
   grid-template-areas:
     "app-title app-title app-title app-title app-title app-title app-title"
-    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area"
-    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area"
-    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area"
-    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area";
+    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
+    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
+    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
+    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list";
 }
 
 .app-title {
@@ -17,8 +17,8 @@
 .side-bar {
   grid-area: side-bar;
 }
-.hero-area {
-  grid-area: hero-area;
+.cocktail-list {
+  grid-area: cocktail-list;
 }
 
 @media only screen and (max-width: 768px) {
@@ -30,8 +30,8 @@
     grid-template-areas:
       "app-title app-title app-title app-title app-title app-title app-title"
       "side-bar side-bar side-bar side-bar side-bar side-bar side-bar"
-      "hero-area hero-area hero-area hero-area hero-area hero-area hero-area"
-      "hero-area hero-area hero-area hero-area hero-area hero-area hero-area"
-      "hero-area hero-area hero-area hero-area hero-area hero-area hero-area";
+      "cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
+      "cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
+      "cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list";
   }
 }
