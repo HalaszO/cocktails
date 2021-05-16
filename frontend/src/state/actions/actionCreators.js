@@ -13,12 +13,24 @@ export const searchCocktails = (searchTerm) => {
     });
 
     try {
-      // making request
-      const { data } = await axios.get(BACKEND_API_ENDPOINT, {
-        params: {
-          search: searchTerm,
-        },
-      });
+      // check cache
+      let data = JSON.parse(
+        sessionStorage.getItem(`cocktailapp::${searchTerm}`)
+      );
+      if (!data) {
+        // make request
+        const response = await axios.get(BACKEND_API_ENDPOINT, {
+          params: {
+            search: searchTerm,
+          },
+        });
+        data = response.data;
+        // save into cache
+        sessionStorage.setItem(
+          `cocktailapp::${searchTerm}`,
+          JSON.stringify(data)
+        );
+      }
       // dispatch success action
       dispatch({ type: LOAD_COCKTAILS_SUCCESS, payload: data });
     } catch (err) {
