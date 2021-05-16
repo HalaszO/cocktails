@@ -21,10 +21,13 @@ interface IdrinkDataOutput {
 
 // Complete input (object with an array inside)
 interface IdrinkData {
-  drinks: IdrinkDataInput[];
+  drinks: IdrinkDataInput[] | null;
 }
 
-const mapDrinks = ({ drinks }: IdrinkData): IdrinkDataOutput[] => {
+const mapDrinks = ({ drinks }: IdrinkData): IdrinkDataOutput[] | null => {
+  if (!drinks) {
+    return null;
+  }
   return drinks.map((drink) => {
     const keys = Object.keys(drink);
 
