@@ -4,20 +4,26 @@ import "./cocktailListItem.css";
 export const CocktailListItem = ({ data }) => {
   return (
     <Card className="list-item card">
-      <img
-        className="card-img list-item img"
-        src={data.thumbnailUrl}
-        alt={`s${data.name}`}
-        height="450"
-      />
+      <div className="img-container">
+        <img
+          className="card-img list-item img"
+          src={data.thumbnailUrl}
+          alt={`s${data.name}`}
+        />
+      </div>
       <CardContent>
         <Typography variant="h5" component="p">
           {data.name}
         </Typography>
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography
+          className="ingridents"
+          variant="body1"
+          color="textSecondary"
+          component="p"
+        >
           {`Ingridients: ${data.ingridients}`}
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography className="instruction" variant="body2" component="p">
           {data.instructions}
         </Typography>
       </CardContent>
