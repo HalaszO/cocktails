@@ -1,4 +1,10 @@
-import { Input, InputAdornment, IconButton, Button } from "@material-ui/core";
+import {
+  Input,
+  InputAdornment,
+  IconButton,
+  Button,
+  Typography,
+} from "@material-ui/core";
 import { Search } from "@material-ui/icons";
 import { useState } from "react";
 import { useActions } from "../../hooks/useActions";
@@ -39,13 +45,14 @@ export const SideBar = () => {
           }
         />
       </form>
+      <Typography variant="h5">OR</Typography>
       <Button
         className="random-btn"
         variant="contained"
         color="primary"
         onClick={handleRandomBtnOnclick}
       >
-        Random cocktail
+        Get a random cocktail
       </Button>
     </div>
   );

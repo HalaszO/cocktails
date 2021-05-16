@@ -1,14 +1,10 @@
 .cocktail-page {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem 0px;
   grid-template-areas:
-    "app-title app-title app-title app-title app-title app-title app-title"
-    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
-    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
-    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
-    "side-bar side-bar cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list";
+    "app-title app-title app-title app-title app-title "
+    "side-bar side-bar cocktail-list cocktail-list cocktail-list";
 }
 
 .app-title {
@@ -25,13 +21,10 @@
   .cocktail-page {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "app-title app-title app-title app-title app-title app-title app-title"
       "side-bar side-bar side-bar side-bar side-bar side-bar side-bar"
-      "cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
-      "cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list"
       "cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list";
   }
 }

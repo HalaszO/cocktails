@@ -4,6 +4,7 @@ import {
   LOAD_COCKTAILS_SUCCESS,
 } from "../actions/actionTypes";
 
+// State contains the state of the data fetching
 const initalState = {
   loading: false,
   error: null,

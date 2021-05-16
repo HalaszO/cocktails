@@ -2,8 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
+}
+
+.search-form {
+  margin-bottom: 1rem;
 }
 
 .random-btn {
-  margin-top: 3rem !important;
+  margin-top: 1rem !important;
 }
