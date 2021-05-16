@@ -5,15 +5,17 @@ import {
   EXT_API_RANDOM_ENDPOINT,
   EXT_API_SEARCH_ENDPOINT,
 } from "../config";
+import mapDrinks from "../utils/mapDrinks";
 
 const router = express.Router();
 
 router.get("/api/cocktails", async (req: Request, res: Response) => {
   let result: AxiosResponse<any>;
   try {
-    if (req.body.searchTerm) {
-      // searching for a cocktail if specified in the request body
-      const searchTerm = req.body.searchTerm;
+    // query search param has the search term
+    if (req.query.search) {
+      // searching for a cocktail if query param is specified
+      const searchTerm = req.query.search as string;
       const url = EXT_API_BASE_URL + EXT_API_SEARCH_ENDPOINT + searchTerm;
       console.log(`External request sent to ${url}`);
       // send ext req
@@ -26,8 +28,8 @@ router.get("/api/cocktails", async (req: Request, res: Response) => {
       result = await axios.get(url);
     }
     console.log("External data recieved on backend");
-    // send API success response
-    res.send(result.data);
+    // send API success response with transformed data
+    res.send(mapDrinks(result.data));
   } catch (err) {
     console.log(err);
     // send failure status
