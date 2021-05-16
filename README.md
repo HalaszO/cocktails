@@ -32,5 +32,5 @@ npm run dev
 
 The frontend server runs on port 3000 while the backend on port 3001.
 
-Open [http://localhost:3000](http://localhost:3000/cocktail) to access the webapp in the browser.
+Open [http://localhost:3000/cocktail](http://localhost:3000/cocktail) to access the webapp in the browser.
 Have fun!
