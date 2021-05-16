@@ -1,0 +1,37 @@
+.cocktail-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "app-title app-title app-title app-title app-title app-title app-title"
+    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area"
+    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area"
+    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area"
+    "side-bar side-bar hero-area hero-area hero-area hero-area hero-area";
+}
+
+.app-title {
+  grid-area: app-title;
+}
+.side-bar {
+  grid-area: side-bar;
+}
+.hero-area {
+  grid-area: hero-area;
+}
+
+@media only screen and (max-width: 768px) {
+  .cocktail-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "app-title app-title app-title app-title app-title app-title app-title"
+      "side-bar side-bar side-bar side-bar side-bar side-bar side-bar"
+      "hero-area hero-area hero-area hero-area hero-area hero-area hero-area"
+      "hero-area hero-area hero-area hero-area hero-area hero-area hero-area"
+      "hero-area hero-area hero-area hero-area hero-area hero-area hero-area";
+  }
+}
