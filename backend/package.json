@@ -13,7 +13,7 @@
     "url": "git+https://github.com/HalaszO/cocktails.git"
   },
   "keywords": [
-    "node.js",
+    "node",
     "express",
     "backend",
     "cocktails"
