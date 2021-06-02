@@ -3,8 +3,26 @@ import {
   LOAD_COCKTAILS_REQUEST,
   LOAD_COCKTAILS_ERROR,
   LOAD_COCKTAILS_SUCCESS,
+  THEME_DARK_TOGGLED,
+  THEME_LIGHT_TOGGLED,
 } from "./actionTypes";
 import { BACKEND_API_ENDPOINT } from "../../config";
+
+export const toggleDarkTheme = () => {
+  return (dispatch) => {
+    dispatch({
+      type: THEME_DARK_TOGGLED,
+    });
+  };
+};
+
+export const toggleLightTheme = () => {
+  return (dispatch) => {
+    dispatch({
+      type: THEME_LIGHT_TOGGLED,
+    });
+  };
+};
 
 export const searchCocktails = (searchTerm) => {
   return async (dispatch) => {

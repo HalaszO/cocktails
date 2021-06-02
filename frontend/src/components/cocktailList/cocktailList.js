@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Typography, CircularProgress } from "@material-ui/core/";
 import { useActions } from "../../hooks/useActions";
 import { CocktailListItem } from "../cocktailListItem/CocktailListItem";
+import "./cocktailList.css";
 
 export const CocktailList = () => {
   const { data, error, loading } = useSelector((state) => state.cocktail);
@@ -28,16 +29,14 @@ export const CocktailList = () => {
 
   return (
     <div className="cocktail-list list">
-      {error && (
-        <Typography variant="h4" gutterBottom>
-          {error}
-        </Typography>
-      )}
+      {error && <Typography variant="h4">{error}</Typography>}
       {loading && (
-        <Typography variant="h4" gutterBottom>
+        <div className="loading">
           <CircularProgress className="progress" />
-          <p>Loading...</p>
-        </Typography>
+          <Typography variant="h4" gutterBottom>
+            Loading...
+          </Typography>
+        </div>
       )}
       {!error && !loading && <List />}
     </div>

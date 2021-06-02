@@ -14,11 +14,11 @@ const initalState = {
 const reducer = (state = initalState, action) => {
   switch (action.type) {
     case LOAD_COCKTAILS_REQUEST:
-      return { loading: true, error: null, data: [] };
+      return { ...state, loading: true, error: null, data: [] };
     case LOAD_COCKTAILS_SUCCESS:
-      return { loading: false, error: null, data: action.payload };
+      return { ...state, loading: false, error: null, data: action.payload };
     case LOAD_COCKTAILS_ERROR:
-      return { loading: false, error: action.payload, data: [] };
+      return { ...state, loading: false, error: action.payload, data: [] };
     default:
       return state;
   }

@@ -2,29 +2,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 2rem 0px;
-  grid-template-areas:
-    "app-title app-title app-title app-title app-title "
-    "side-bar side-bar cocktail-list cocktail-list cocktail-list";
+  grid-template-areas: "side-bar side-bar cocktail-list cocktail-list cocktail-list";
+  margin-top: 4rem;
 }
 
-.app-title {
-  grid-area: app-title;
-}
 .side-bar {
   grid-area: side-bar;
 }
 .cocktail-list {
   grid-area: cocktail-list;
+  min-height: 350px;
 }
 
 @media only screen and (max-width: 768px) {
   .cocktail-page {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
+    gap: 5rem 0px;
     grid-template-areas:
-      "app-title app-title app-title app-title app-title app-title app-title"
       "side-bar side-bar side-bar side-bar side-bar side-bar side-bar"
       "cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list cocktail-list";
+    margin-top: 1rem;
+  }
+
+  .cocktail-list {
+    min-height: 200px;
   }
 }
